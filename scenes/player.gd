@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 class_name Player
 
+@onready var debug_label = $DebugLabel
+
 @onready var sprite_2d = $Sprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var sound_player = $SoundPlayer
@@ -26,6 +28,14 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	calculate_state()
+	update_debug_label()
+
+func update_debug_label():
+	debug_label.text = "floor: %s\n%s\n%.0f,%.0f" % [
+		is_on_floor(),
+		PLAYER_STATE.keys()[_state],
+		velocity.x, velocity.y
+	]
 
 func get_input() -> void:
 	velocity.x = 0

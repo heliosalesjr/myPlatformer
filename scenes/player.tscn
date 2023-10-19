@@ -114,7 +114,7 @@ _data = {
 "run": SubResource("Animation_yc20n")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_7r6yw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -133,9 +133,10 @@ libraries = {
 }
 
 [node name="DebugLabel" type="Label" parent="."]
-offset_left = -24.0
-offset_top = -28.0
+offset_left = -30.0
+offset_top = -96.0
 offset_right = 31.0
-offset_bottom = -2.0
+offset_bottom = -55.0
+text = "asdasd "
 
 [node name="SoundPlayer" type="AudioStreamPlayer2D" parent="."]
