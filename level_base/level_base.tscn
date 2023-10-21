@@ -550,5 +550,14 @@ zoom = Vector2(2, 2)
 [node name="Player" parent="." instance=ExtResource("3_slm1o")]
 position = Vector2(647, 79)
 
-[node name="Frog" parent="Player" instance=ExtResource("6_oaf5j")]
-position = Vector2(183, -13)
+[node name="Frog" parent="." instance=ExtResource("6_oaf5j")]
+position = Vector2(387, 33)
+
+[node name="Frog2" parent="." instance=ExtResource("6_oaf5j")]
+position = Vector2(594, 37)
+
+[node name="Frog4" parent="." instance=ExtResource("6_oaf5j")]
+position = Vector2(519, -21)
+
+[node name="Frog3" parent="." instance=ExtResource("6_oaf5j")]
+position = Vector2(677, 34)
