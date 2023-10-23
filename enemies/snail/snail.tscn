@@ -86,6 +86,7 @@ animations = [{
 }]
 
 [node name="Snail" instance=ExtResource("1_bkf6d")]
+collision_layer = 0
 script = ExtResource("2_jwpjb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]

@@ -70,6 +70,7 @@ animations = [{
 size = Vector2(16, 11)
 
 [node name="Frog" instance=ExtResource("1_squ65")]
+collision_layer = 0
 script = ExtResource("2_hisc5")
 
 [node name="AnimatedSprite2D" parent="." index="1"]
