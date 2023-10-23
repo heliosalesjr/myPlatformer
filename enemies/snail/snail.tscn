@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://725aj6tmdbgt"]
+[gd_scene load_steps=17 format=3 uid="uid://725aj6tmdbgt"]
 
 [ext_resource type="PackedScene" uid="uid://w1ij8hy72yeq" path="res://enemies/enemy_base.tscn" id="1_bkf6d"]
 [ext_resource type="Script" path="res://enemies/snail/snail.gd" id="2_jwpjb"]
@@ -85,8 +85,11 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_86mr5"]
+radius = 8.0
+height = 22.0
+
 [node name="Snail" instance=ExtResource("1_bkf6d")]
-collision_layer = 0
 script = ExtResource("2_jwpjb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
@@ -103,3 +106,7 @@ frame_progress = 0.624108
 [node name="FloorDetection" type="RayCast2D" parent="." index="3"]
 position = Vector2(-12, 0)
 target_position = Vector2(0, 30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_86mr5")

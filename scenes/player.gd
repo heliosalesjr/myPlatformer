@@ -87,3 +87,7 @@ func set_state(new_state: PLAYER_STATE):
 			animation_player.play("fall")
 		PLAYER_STATE.HURT:
 			animation_player.play("hurt")
+
+
+func _on_hit_box_area_entered(area):
+	pass # Replace with function body.
