@@ -9,9 +9,9 @@ func _ready():
 	
 func _process(delta):
 	check_expired(delta)
-	position += _direction * delta * 20
+	position += _direction * delta
 	
-func setup(dir: Vector2, _life_span, speed):
+func setup(dir: Vector2, _life_span: float, speed: float):
 	_direction = dir.normalized() * speed
 	_life_span = _life_span
 
