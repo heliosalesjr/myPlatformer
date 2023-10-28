@@ -31,8 +31,9 @@ func _physics_process(delta):
 	update_debug_label()
 
 	if Input.is_action_just_pressed("shoot") == true:
-		ObjectMaker.create_bullet(50.0, Vector2.RIGHT, global_position, 20.0, ObjectMaker.BULLET_KEY.ENEMY)
-
+		#ObjectMaker.create_bullet(50.0, Vector2.RIGHT, global_position, 20.0, ObjectMaker.BULLET_KEY.ENEMY)
+		pass
+		
 func update_debug_label():
 	debug_label.text = "floor: %s\n%s\n%.0f,%.0f" % [
 		is_on_floor(),
