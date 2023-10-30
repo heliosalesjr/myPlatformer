@@ -26,4 +26,4 @@ func shoot(direction: Vector2):
 	
 
 func _on_shoot_timer_timeout():
-	pass # Replace with function body.
+	_can_shoot = true

@@ -7,6 +7,7 @@ class_name Player
 @onready var sprite_2d = $Sprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var sound_player = $SoundPlayer
+@onready var shooter = $Shooter
 
 const GRAVITY: float = 1000.0
 const RUN_SPEED: float = 320.0
@@ -32,7 +33,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("shoot") == true:
 		#ObjectMaker.create_bullet(50.0, Vector2.RIGHT, global_position, 20.0, ObjectMaker.BULLET_KEY.ENEMY)
-		pass
+		shoot()
 		
 func update_debug_label():
 	debug_label.text = "floor: %s\n%s\n%.0f,%.0f" % [
@@ -40,6 +41,12 @@ func update_debug_label():
 		PLAYER_STATE.keys()[_state],
 		velocity.x, velocity.y
 	]
+
+func shoot():
+	if sprite_2d.flip_h == true: #that means left
+		shooter.shoot(Vector2.LEFT)
+	else:
+		shooter.shoot(Vector2.RIGHT)
 
 func get_input() -> void:
 	velocity.x = 0
