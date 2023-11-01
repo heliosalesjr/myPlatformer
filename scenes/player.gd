@@ -32,7 +32,7 @@ func _physics_process(delta):
 	update_debug_label()
 
 	if Input.is_action_just_pressed("shoot") == true:
-		#ObjectMaker.create_bullet(50.0, Vector2.RIGHT, global_position, 20.0, ObjectMaker.BULLET_KEY.ENEMY)
+		#ObjectMaker.create_bullet(50.0, Vector2.RIGHT, global_position, 20.0, ObjectMaker.BULLET_KEY.PLAYER)
 		shoot()
 		
 func update_debug_label():
