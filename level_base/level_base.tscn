@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b66n2jurji14v" path="res://assets/tiles/Terrain (16x16).png" id="1_67s4w"]
 [ext_resource type="PackedScene" uid="uid://cyl3cebukhbnn" path="res://player_cam/player_cam.tscn" id="2_oefwf"]
 [ext_resource type="PackedScene" uid="uid://ilg7w3iwwdv3" path="res://scenes/player.tscn" id="3_slm1o"]
-[ext_resource type="PackedScene" uid="uid://dwq2jwhhfxjlg" path="res://enemies/eagle/eagle.tscn" id="5_isgw5"]
 [ext_resource type="PackedScene" uid="uid://725aj6tmdbgt" path="res://enemies/snail/snail.tscn" id="6_ibm8q"]
+[ext_resource type="PackedScene" uid="uid://cbt6jq5bn8wju" path="res://enemies/frog/frog.tscn" id="6_plion"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ovmt"]
 texture = ExtResource("1_67s4w")
@@ -536,14 +536,11 @@ layer_0/tile_data = PackedInt32Array(458769, 458752, 0, 458770, 458752, 0, 45877
 position = Vector2(310, -13)
 zoom = Vector2(2, 2)
 
-[node name="Player" parent="." instance=ExtResource("3_slm1o")]
-position = Vector2(647, 79)
-
-[node name="Eagle" parent="." instance=ExtResource("5_isgw5")]
-position = Vector2(588, -20)
-
 [node name="Snail" parent="." instance=ExtResource("6_ibm8q")]
-position = Vector2(878, 97)
+position = Vector2(765, 79)
 
-[node name="Snail2" parent="." instance=ExtResource("6_ibm8q")]
-position = Vector2(550, 94)
+[node name="Frog" parent="." instance=ExtResource("6_plion")]
+position = Vector2(611, 32)
+
+[node name="Player" parent="." instance=ExtResource("3_slm1o")]
+position = Vector2(548, 88)
